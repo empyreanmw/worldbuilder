@@ -1,28 +1,17 @@
 {
     "name": "empyrean/worldbuilder",
-    "description": "JSON Web Token Authentication for Laravel 4 and 5",
-    "keywords": [
-        "jwt",
-        "auth",
-        "authentication",
-        "tymon",
-        "laravel",
-        "json web token"
-    ],
-    "homepage": "https://github.com/tymondesigns/jwt-auth",
+    "description": "Executes all of your factory files with a simple command.",
+
+    "homepage": "https://github.com/empyreanmw/worldbuilder",
     "license": "MIT",
     "authors": [{
-        "name": "Sean Tymon",
-        "email": "tymon148@gmail.com",
-        "homepage": "http://tymondesigns.com",
+        "name": "Zeljko Bogicevic",
+        "email": "empyreanmw@gmail.com",
         "role": "Developer"
     }],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "~5.0",
-        "illuminate/http": "~5.0",
-        "namshi/jose": "^5.0 || ^7.0",
-        "nesbot/carbon": "~1.0"
+        "php": ">=7.0.0",
+        "laravel/framework": "5.5.*"
     },
 
     "autoload": {
