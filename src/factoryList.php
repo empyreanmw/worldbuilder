@@ -21,7 +21,7 @@ class factoryList
         $this->factoryPath = $factoryPath;
         $this->userInput = $userInput;
         $this->everyModel = new everyModel();
-        $this->except = new except($this->everyModel);
+        $this->except = new except(new everyModel());
     }
 
     public function selectMethod()

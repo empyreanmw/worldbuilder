@@ -29,6 +29,6 @@ class builder
 
     public function message($factoryModel)
     {
-        return $this->models." ".$factoryModel. " models has been succesfully created!";
+        return $this->models." ".$factoryModel. " models have been succesfully created!";
     }
 }
