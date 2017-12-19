@@ -7,16 +7,21 @@ use empyrean\worldbuilder\everyModel;
 
 class except implements factoryModels
 {
-    public function get($factoryList)
+    protected $factoryList;
+
+    public function __construct(everyModel $everyModel)
     {
-        $everyModel = new everyModel(config('wb.factoryPath'));
+        $this->factoryList = $everyModel->get(config('wb.factoryPath'));
+    }
 
-        foreach($everyModel as $factory)
-        {
-            $key = array_search($factory, $factoryList);
-            unset($factoryList[$key]);
-        }
+    public function get($userInput)
+    {
+           foreach($userInput as $factory)
+           {
+                $key = array_search($factory, $this->factoryList);
+                unset($this->factoryList[$key]);  
+           }
 
-        return $factoryList;
+           return $this->factoryList;
     }
 }

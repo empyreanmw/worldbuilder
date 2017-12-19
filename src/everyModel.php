@@ -19,7 +19,7 @@ class everyModel implements factoryModels
         {
             $this->factories[] = $this->prepareFactoryName($file->getContents());
         }
-
+        
         return $this->factories;
     }
 
@@ -29,5 +29,7 @@ class everyModel implements factoryModels
 
        return $matches[1];
     }
+
+
 
 }

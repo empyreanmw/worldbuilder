@@ -12,24 +12,28 @@ class factoryList
 
     protected $userInput;
 
+    protected $everyModel;
+
+    protected $except;
+
     public function __construct($factoryPath, $userInput)
     {
         $this->factoryPath = $factoryPath;
         $this->userInput = $userInput;
+        $this->everyModel = new everyModel();
+        $this->except = new except($this->everyModel);
     }
 
     public function selectMethod()
     {
         if ($this->factoryModels()->first() == "all")
         {           
-           $everyModel = new everyModel(); 
-           return $everyModel->get($this->factoryPath);
+           return $this->everyModel->get($this->factoryPath);
         }
         
         if($this->factoryModels()->first() != "all" && $this->userInput[1]=="true")
         {
-          $except = new except();
-          return  $except->get($this->factoryModels());
+          return  $this->except->get($this->factoryModels());
         }
         
         if($this->factoryModels()->first() != "all" && $this->userInput[1]!="true")
