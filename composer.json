@@ -13,6 +13,14 @@
         "php": ">=7.0.0",
         "laravel/framework": "5.5.*"
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "empyrean\\worldbuilder\\proiders\\WBServiceProvider"
+            ]
+        }
+    },
+
 
     "autoload": {
         "psr-4": {
