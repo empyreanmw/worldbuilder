@@ -8,6 +8,10 @@ Install worldbuilder with composer by running:
 ```
 composer require empyrean/worldbuilder
 ```
+Add a WBServiceProvider to your project's list of providers by pasting this line in your config/app file:
+```
+empyrean\worldbuilder\providers\WBServiceProvider
+```
 Publlish a config file by running:
 ```
 php artisan vendor:publish
